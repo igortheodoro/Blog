@@ -1,0 +1,19 @@
+<%- include("partials/header")%>
+
+<div class="text-center">
+  <h1 style=" font-weight: bold;" class="text-dark pb-3 display-4"> <%= found.title %>
+  </h1>
+  <h5 style="border-bottom: 8px solid #343a40;" class="text-dark pb-4">
+    <%= found.created.toDateString().substring(4, 15) %></h5>
+  <div class="row py-3">
+    <div class="col-12 col-lg-6 mb-3">
+      <img style="width: 100%;" src="<%= found.img %>" alt="">
+    </div>
+    <div class="mx-3">
+      <p style="font-size: 1.5rem;"> <%- found.text %> </p>
+    </div>
+  </div>
+</div>
+
+
+<%- include("partials/footer")%>

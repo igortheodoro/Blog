@@ -1,0 +1,27 @@
+<%- include("partials/header")%>
+
+<div class="text-center">
+  <h1 class="display-4 mb-5">Últimas postagens </h1>
+</div>
+
+<div class="row">
+  <% for(var i = 0; i < posts.length; i++){ %>
+  <% if(i < 2){ %>
+  <div class="col-12 col-sm-6">
+    <h1><%= posts[i].title %></h1>
+    <img style="width: 100%;" src="<%= posts[i].img %>" alt="Imagem da postagem">
+    <a class="my-2 btn btn-info" href="/posts/<%=posts[i]._id%>"><i class="fab fa-readme"></i></a>
+    <a class="my-2 btn btn-danger" href="/posts/<%=posts[i]._id%>/edit"><i class="fas fa-pencil-alt"></i></a>
+  </div>
+  <% } else { %>
+  <div class="col-12 col-sm-4 my-3">
+    <h1><%= posts[i].title %></h1>
+    <img style="width: 100%;" src="<%= posts[i].img %>" alt="Imagem da postagem">
+    <a class="my-2 btn btn-info" href="/posts/<%=posts[i]._id%>"><i class="fab fa-readme"></i></a>
+    <a class="my-2 btn btn-danger" href="/posts/<%=posts[i]._id%>/edit"><i class="fas fa-pencil-alt"></i></a>
+  </div>
+  <% } %>
+  <% } %>
+</div>
+
+<%- include("partials/footer")%>

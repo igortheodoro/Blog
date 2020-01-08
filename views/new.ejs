@@ -1,0 +1,25 @@
+<%- include("partials/header")%>
+
+
+<form action="/posts/new" method="POST">
+
+  <div class="ml-auto mr-auto w-50 form-group">
+
+    <label class="h5" for="title">Título do post</label>
+    <input id="title" class="form-control" type="text" name="title" placeholder="Título">
+
+    <label class="mt-4 h5" for="img">Link da imagem</label>
+    <input id="img" class="link form-control mb-4" type="text" name="img" placeholder="Link">
+
+    <label class="h5" for="text">Conteúdo do post</label>
+    <textarea id="text" style="height: 250px;" class="form-control" type="text" name="text"
+      placeholder="Texto da postagem"></textarea>
+  </div>
+
+  <div class="text-center my-5">
+    <button class=" btn btn-primary" type="submit">Postar</button>
+  </div>
+</form>
+
+
+<%- include("partials/footer")%>

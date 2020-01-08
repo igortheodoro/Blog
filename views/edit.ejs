@@ -1,0 +1,23 @@
+<%- include("partials/header")%>
+
+<div class="text-center ml-auto mr-auto w-50">
+  <form action="/posts/<%= post._id %>?_method=PUT" method="POST">
+
+    <div>
+      <input class="form-control" type="text" name="title" placeholder="Título da postagem" value="<%= post.title %>">
+      <input class="link form-control my-4" type="text" name="img" placeholder="Link da imagem" value="<%= post.img %>">
+      <textarea style="height:250px;" class="text-justify form-control" type="text" name="text"
+        placeholder="Texto da postagem"> <%= post.text %> </textarea>
+    </div>
+    <button class="my-4 btn btn-primary" type="submit">Enviar edição</button>
+  </form>
+
+  <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+
+    <button class="btn btn-danger">Excluir</button>
+
+  </form>
+
+</div>
+
+<%- include("partials/footer")%>
